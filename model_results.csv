@@ -1,0 +1,141 @@
+model,term,OR,lo,hi,p
+Crude,sexFemale,0.61,0.58,0.64,7.129999999999999e-80
+Crude,age25-29,1.47,1.01,2.14,0.0447
+Crude,age30-34,1.49,1.07,2.07,0.0189
+Crude,age35-39,2.01,1.47,2.75,1.2e-5
+Crude,age40-44,2.92,2.17,3.94,1.86e-12
+Crude,age45-49,4.48,3.39,5.93,6.270000000000001e-26
+Crude,age50-54,7.67,5.82,10.11,2.3299999999999997e-47
+Crude,age55-59,9.77,7.49,12.74,1.6799999999999996e-63
+Crude,age60-64,14.02,10.79,18.2,3.9899999999999987e-87
+Crude,age65-69,16.16,12.5,20.89,5.25e-100
+Crude,age70-74,21.98,16.98,28.45,9.39e-122
+Crude,age75-79,26.71,20.66,34.53,1.4599999999999997e-138
+Crude,age80+,32.95,25.52,42.54,4.509999999999998e-158
+Crude,raceBlack NH,0.82,0.75,0.9,3.82e-5
+Crude,raceAI/AN NH,1.36,1.1,1.68,0.00423
+Crude,raceAsian NH,0.35,0.29,0.43,3.22e-23
+Crude,raceNHOPI NH,1,0.69,1.46,0.993
+Crude,raceOther NH,0.85,0.68,1.06,0.156
+Crude,raceMultiracial NH,0.89,0.77,1.03,0.107
+Crude,raceHispanic,0.63,0.57,0.69,8.17e-19
+Crude,educHigh school,0.62,0.57,0.68,1.83e-24
+Crude,educSome college,0.67,0.61,0.74,1.35e-17
+Crude,educCollege grad,0.44,0.4,0.48,3.0499999999999995e-72
+Crude,income15-25k,0.99,0.88,1.11,0.81
+Crude,income25-35k,0.77,0.68,0.87,1.41e-5
+Crude,income35-50k,0.66,0.59,0.74,1.21e-12
+Crude,income50-100k,0.5,0.45,0.55,1.73e-38
+Crude,income100-200k,0.35,0.31,0.39,3.73e-73
+Crude,income200k+,0.26,0.22,0.31,6.819999999999999e-57
+Crude,maritalDivorced,1.45,1.36,1.55,1.3e-27
+Crude,maritalWidowed,2.55,2.38,2.74,6.019999999999999e-155
+Crude,maritalSeparated,1.21,1.02,1.43,0.0281
+Crude,maritalNever married,0.37,0.34,0.41,6.789999999999998e-109
+Crude,maritalUnmarried couple,0.5,0.42,0.6,1.87e-13
+Crude,employSelf-employed,1.64,1.47,1.84,1.22e-17
+Crude,employOut of work 1y+,2.21,1.83,2.66,1.27e-16
+Crude,employOut of work <1y,1.44,1.17,1.77,4.7e-4
+Crude,employHomemaker,1.4,1.17,1.67,1.85e-4
+Crude,employStudent,0.44,0.31,0.62,5.32e-6
+Crude,employRetired,6.36,5.92,6.83,0
+Crude,employUnable to work,8.4,7.65,9.23,0
+Crude,smokerFormer,2.46,2.33,2.6,1.9999999999999994e-219
+Crude,smokerCurrent some days,2.13,1.85,2.45,1.24e-25
+Crude,smokerCurrent daily,2.65,2.42,2.89,4.789999999999999e-103
+Crude,activeInactive,2.19,2.07,2.31,1.3099999999999996e-178
+Crude,anydrinkAny drink,1.72,1.63,1.82,2.6899999999999998e-86
+Crude,bingeYes,0.48,0.43,0.54,8.25e-36
+Crude,heavyYes,0.71,0.61,0.83,1.65e-5
+Crude,htnYes,5.71,5.4,6.05,0
+Crude,cholYes,3.58,3.38,3.79,0
+Crude,diabPrediabetes,2.43,2.13,2.78,4.16e-39
+Crude,diabYes,4.78,4.52,5.05,0
+Crude,bmicatUnderweight,1.27,1.05,1.53,0.012
+Crude,bmicatOverweight,1.44,1.34,1.54,9.94e-25
+Crude,bmicatObese,1.67,1.56,1.78,8.05e-50
+Crude,genhlthVery good,1.64,1.42,1.9,1.7e-11
+Crude,genhlthGood,3.57,3.11,4.1,7.299999999999999e-72
+Crude,genhlthFair,7.76,6.74,8.93,2.4299999999999993e-179
+Crude,genhlthPoor,19.04,16.39,22.12,2e-323
+Adj 1: demographic + behavioural,age25-29,1.28,0.81,2.02,0.291
+Adj 1: demographic + behavioural,age30-34,1.11,0.74,1.65,0.624
+Adj 1: demographic + behavioural,age35-39,1.73,1.17,2.56,0.00608
+Adj 1: demographic + behavioural,age40-44,2.45,1.69,3.56,2.66e-6
+Adj 1: demographic + behavioural,age45-49,3.7,2.6,5.27,3.37e-13
+Adj 1: demographic + behavioural,age50-54,6.24,4.4,8.84,7.62e-25
+Adj 1: demographic + behavioural,age55-59,7.9,5.63,11.1,8.92e-33
+Adj 1: demographic + behavioural,age60-64,10.88,7.79,15.2,1.62e-44
+Adj 1: demographic + behavioural,age65-69,11.7,8.43,16.25,8.08e-49
+Adj 1: demographic + behavioural,age70-74,16.78,12.07,23.32,3.5199999999999994e-63
+Adj 1: demographic + behavioural,age75-79,21.04,15.16,29.19,3.0699999999999995e-74
+Adj 1: demographic + behavioural,age80+,24.61,17.77,34.06,5.549999999999999e-83
+Adj 1: demographic + behavioural,sexFemale,0.5,0.47,0.53,7.239999999999998e-106
+Adj 1: demographic + behavioural,raceBlack NH,0.97,0.85,1.09,0.572
+Adj 1: demographic + behavioural,raceAI/AN NH,1.53,1.17,2,0.00177
+Adj 1: demographic + behavioural,raceAsian NH,0.71,0.56,0.91,0.00585
+Adj 1: demographic + behavioural,raceNHOPI NH,1.97,1.25,3.12,0.00361
+Adj 1: demographic + behavioural,raceOther NH,0.63,0.45,0.86,0.00394
+Adj 1: demographic + behavioural,raceMultiracial NH,1.2,1.01,1.43,0.0395
+Adj 1: demographic + behavioural,raceHispanic,0.84,0.73,0.98,0.0238
+Adj 1: demographic + behavioural,educHigh school,0.82,0.72,0.92,0.00132
+Adj 1: demographic + behavioural,educSome college,0.94,0.82,1.07,0.338
+Adj 1: demographic + behavioural,educCollege grad,0.78,0.69,0.89,2.96e-4
+Adj 1: demographic + behavioural,income15-25k,0.86,0.76,0.99,0.0336
+Adj 1: demographic + behavioural,income25-35k,0.71,0.62,0.82,3.62e-6
+Adj 1: demographic + behavioural,income35-50k,0.61,0.53,0.7,1.84e-12
+Adj 1: demographic + behavioural,income50-100k,0.5,0.43,0.56,1.59e-25
+Adj 1: demographic + behavioural,income100-200k,0.45,0.39,0.51,3.6199999999999997e-28
+Adj 1: demographic + behavioural,income200k+,0.37,0.3,0.45,1.58e-22
+Adj 1: demographic + behavioural,smokerFormer,1.49,1.39,1.59,4.799999999999999e-31
+Adj 1: demographic + behavioural,smokerCurrent some days,1.81,1.51,2.16,9.71e-11
+Adj 1: demographic + behavioural,smokerCurrent daily,1.75,1.56,1.96,2.6800000000000003e-21
+Adj 1: demographic + behavioural,activeInactive,1.52,1.41,1.63,2.1700000000000002e-29
+Adj 1: demographic + behavioural,bingeYes,0.75,0.66,0.85,1.39e-5
+Adj 2: + clinical,age25-29,1.13,0.64,2.01,0.667
+Adj 2: + clinical,age30-34,0.9,0.55,1.48,0.689
+Adj 2: + clinical,age35-39,1.31,0.81,2.12,0.275
+Adj 2: + clinical,age40-44,1.51,0.95,2.39,0.0826
+Adj 2: + clinical,age45-49,2.18,1.41,3.37,4.79e-4
+Adj 2: + clinical,age50-54,3.14,2.03,4.84,2.4e-7
+Adj 2: + clinical,age55-59,3.39,2.21,5.19,2.25e-8
+Adj 2: + clinical,age60-64,4.52,2.97,6.88,1.97e-12
+Adj 2: + clinical,age65-69,4.7,3.1,7.13,3.48e-13
+Adj 2: + clinical,age70-74,6.63,4.37,10.07,6.75e-19
+Adj 2: + clinical,age75-79,8.4,5.54,12.74,1.32e-23
+Adj 2: + clinical,age80+,10.39,6.88,15.68,9.59e-29
+Adj 2: + clinical,sexFemale,0.52,0.49,0.56,8.409999999999999e-76
+Adj 2: + clinical,raceBlack NH,0.81,0.71,0.93,0.00184
+Adj 2: + clinical,raceAI/AN NH,1.51,1.15,1.99,0.00351
+Adj 2: + clinical,raceAsian NH,0.67,0.52,0.85,0.00105
+Adj 2: + clinical,raceNHOPI NH,2.05,1.25,3.39,0.00477
+Adj 2: + clinical,raceOther NH,0.59,0.42,0.84,0.00338
+Adj 2: + clinical,raceMultiracial NH,1.16,0.96,1.42,0.133
+Adj 2: + clinical,raceHispanic,0.79,0.67,0.93,0.00377
+Adj 2: + clinical,educHigh school,0.79,0.69,0.91,6.83e-4
+Adj 2: + clinical,educSome college,0.89,0.77,1.03,0.109
+Adj 2: + clinical,educCollege grad,0.77,0.66,0.89,2.94e-4
+Adj 2: + clinical,income15-25k,0.83,0.72,0.96,0.013
+Adj 2: + clinical,income25-35k,0.75,0.64,0.88,3.84e-4
+Adj 2: + clinical,income35-50k,0.62,0.53,0.72,1.58e-9
+Adj 2: + clinical,income50-100k,0.53,0.46,0.61,1.23e-17
+Adj 2: + clinical,income100-200k,0.49,0.42,0.58,1.3e-18
+Adj 2: + clinical,income200k+,0.42,0.34,0.52,7.41e-16
+Adj 2: + clinical,smokerFormer,1.43,1.33,1.54,1.06e-22
+Adj 2: + clinical,smokerCurrent some days,1.86,1.51,2.28,3.18e-9
+Adj 2: + clinical,smokerCurrent daily,1.85,1.64,2.09,1.16e-22
+Adj 2: + clinical,activeInactive,1.36,1.25,1.47,5.49e-14
+Adj 2: + clinical,bingeYes,0.76,0.66,0.88,2.71e-4
+Adj 2: + clinical,htnYes,2.07,1.91,2.24,2.5999999999999995e-72
+Adj 2: + clinical,cholYes,1.82,1.69,1.96,2.76e-54
+Adj 2: + clinical,diabPrediabetes,1.3,1.09,1.55,0.00421
+Adj 2: + clinical,diabYes,1.83,1.69,1.97,1.53e-50
+Adj 2: + clinical,bmicatUnderweight,1.31,1.01,1.7,0.0389
+Adj 2: + clinical,bmicatOverweight,0.97,0.89,1.06,0.503
+Adj 2: + clinical,bmicatObese,1.02,0.93,1.13,0.608
+"Smoking OR, Male",smokerFormer,1.42,1.29,1.56,3.67e-13
+"Smoking OR, Male",smokerCurrent some days,1.58,1.14,2.2,0.00631
+"Smoking OR, Male",smokerCurrent daily,1.85,1.57,2.18,2.13e-13
+"Smoking OR, Female",smokerFormer,1.45,1.29,1.62,1.83e-10
+"Smoking OR, Female",smokerCurrent some days,2.25,1.78,2.84,1e-11
+"Smoking OR, Female",smokerCurrent daily,1.83,1.52,2.2,2.25e-10

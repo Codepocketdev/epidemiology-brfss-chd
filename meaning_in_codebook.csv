@@ -1,0 +1,120 @@
+Meaning of the codes as they appear in the codebook,,
+Variable,Original code,Meaning in the codebook
+_MICHD,1,Reported having MI or CHD
+,2,Did not report having MI or CHD
+,Blank,Not asked or missing
+SEXVAR,1,Male
+,2,Female
+_AGEG5YR,1–13,Age groups from 18–24 through 80 years or older
+,14,"Don't know, refused, or missing age"
+_RACE,1,"White only, non-Hispanic"
+,2,"Black only, non-Hispanic"
+,3,"American Indian or Alaska Native only, non-Hispanic"
+,4,"Asian only, non-Hispanic"
+,5,"Native Hawaiian or other Pacific Islander only, non-Hispanic"
+,6,"Other race only, non-Hispanic"
+,7,"Multiracial, non-Hispanic"
+,8,Hispanic
+,9,"Don't know, not sure, or refused"
+,Blank,Missing
+_EDUCAG,1,Did not graduate high school
+,2,Graduated high school
+,3,Attended college or technical school
+,4,Graduated from college or technical school
+,9,"Don't know, not sure, or missing"
+_INCOMG1,1,"Less than $15,000"
+,2,"$15,000 to under $25,000"
+,3,"$25,000 to under $35,000"
+,4,"$35,000 to under $50,000"
+,5,"$50,000 to under $100,000"
+,6,"$100,000 to under $200,000"
+,7,"$200,000 or more"
+,9,"Don't know, not sure, or missing"
+MARITAL,1,Married
+,2,Divorced
+,3,Widowed
+,4,Separated
+,5,Never married
+,6,Member of an unmarried couple
+,9,Refused
+,Blank,Not asked or missing
+EMPLOY1,1,Employed for wages
+,2,Self-employed
+,3,Out of work for one year or more
+,4,Out of work for less than one year
+,5,Homemaker
+,6,Student
+,7,Retired
+,8,Unable to work
+,9,Refused
+,Blank,Not asked or missing
+,,
+Behavioral variables,,
+,,
+Variable,Original code,Meaning in the codebook
+_SMOKER3,1,Current smoker — smokes every day
+,2,Current smoker — smokes some days
+,3,Former smoker
+,4,Never smoked
+,9,"Don't know, refused, or missing"
+_TOTINDA,1,Had physical activity or exercise in the past 30 days
+,2,No physical activity or exercise in the past 30 days
+,9,"Don't know, refused, or missing"
+DRNKANY6,1,"Yes, had at least one alcoholic drink in the past 30 days"
+,2,No
+,7,Don't know or not sure
+,9,Refused or missing
+_RFBING6,1,No binge drinking
+,2,"Yes, binge drinking"
+,9,"Don't know, refused, or missing"
+_RFDRHV9,1,No heavy drinking
+,2,"Yes, heavy drinking"
+,9,"Don't know, refused, or missing"
+,,
+Clinical and general health variables,,
+,,
+Variable,Original code,Meaning in the codebook
+BPHIGH6,1,"Yes, told they have high blood pressure"
+,2,"Yes, but only during pregnancy"
+,3,No
+,4,"Told borderline high, pre-hypertensive, or elevated blood pressure"
+,7,Don't know or not sure
+,9,Refused
+,Blank,Not asked or missing
+BPMEDS1,1,"Yes, currently taking prescription medicine for high blood pressure"
+,2,No
+,7,Don't know or not sure
+,9,Refused
+,Blank,Not asked or missing
+TOLDHI3,1,"Yes, told they have high cholesterol"
+,2,No
+,7,Don't know or not sure
+,9,Refused
+,Blank,Not asked or missing
+CHOLMED3,1,"Yes, currently taking prescribed cholesterol medicine"
+,2,No
+,7,Don't know or not sure
+,9,Refused
+,Blank,Not asked or missing
+DIABETE4,1,"Yes, told they have diabetes"
+,2,"Yes, but only during pregnancy"
+,3,No
+,4,"No, prediabetes or borderline diabetes"
+,7,Don't know or not sure
+,9,Refused
+,Blank,Not asked or missing
+_BMI5,1–9999,"Calculated BMI, stored with two implied decimal places"
+,Blank,"Don't know, refused, or missing height/weight information"
+_BMI5CAT,1,Underweight
+,2,Normal weight
+,3,Overweight
+,4,Obese
+,Blank,"Don't know, refused, or missing BMI information"
+GENHLTH,1,Excellent
+,2,Very good
+,3,Good
+,4,Fair
+,5,Poor
+,7,Don't know or not sure
+,9,Refused
+,Blank,Not asked or missing

@@ -1,0 +1,138 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+# Project Overview.
+
+This project investigates demographic, behavioural, and clinical factors associated with cardiovascular disease and related health outcomes using data from the 2025 Behavioral Risk Factor Surveillance System (BRFSS), published by the U.S. Centers for Disease Control and Prevention (CDC).
+
+The analysis will focus on a history of coronary heart disease or myocardial infarction as the primary outcome. Statistical analysis and visualization in R will be used to describe the study population and investigate associations between selected risk factors and the outcome.
+
+The project will also consider potential confounding, effect modification, and the limitations of the data to support careful epidemiological interpretation.
+
+# Research questions and Objectives.
+
+*Research question:* Which demographic, behavioural, and clinical factors are associated with a reported history of coronary heart disease or myocardial infarction among BRFSS respondents?
+
+**Objectives**
+
+1.  Describe the demographic, behavioural, and clinical characteristics of the study population.
+
+2.  Estimate the prevalence of the selected cardiovascular outcome.
+
+3.  Investigate associations between selected factors and the outcome.
+
+4.  Consider potential confounding and effect modification.
+
+5.  Communicate the findings through reproducible analysis and visualizations.
+
+# Loading packages and Data importation.
+
+```{r}
+library(tidyverse)
+library(haven)
+```
+
+```{r}
+Dataset<-read_xpt("C:\\Users\\USER\\OneDrive\\Desktop\\E.A.A\\R\\PROJECTS\\Epidemiology in R\\LLCP2025.XPT")
+```
+
+# Initial data Exploration.
+
+```{r}
+head(Dataset)
+```
+
+```{r}
+dim(Dataset)
+```
+
+```{r}
+glimpse(Dataset)
+```
+
+# 
+
+# Variable Selection.
+
+| Variable | Meaning | Study role | Why include it |
+|------------------|------------------|------------------|------------------|
+| \_MICHD | Ever reported coronary heart disease (CHD) or myocardial infarction (MI) | Outcome | Identifies the cardiovascular outcome being investigated |
+| SEXVAR | Sex of respondent | Demographic factor | Explore differences in CHD/MI history by sex |
+| \_AGEG5YR | Age grouped into 14 categories | Demographic factor | Age is important when examining cardiovascular risk and confounding |
+| \_RACE | Race/ethnicity categories | Demographic factor | Examine differences across demographic groups |
+| \_EDUCAG | Level of education completed | Socioeconomic factor | Explore the relationship between education and health |
+| \_INCOMG1 | Household income categories | Socioeconomic factor | Explore socioeconomic differences in health |
+| MARITAL | Marital status | Demographic factor | Explore whether marital status is associated with the outcome |
+| EMPLOY1 | Current employment status | Socioeconomic factor | Explore possible associations between employment and health |
+| \_SMOKER3 | Four-level smoking status | Behavioral exposure | Investigate smoking status in relation to CHD/MI |
+| \_TOTINDA | Physical activity or exercise in the past 30 days, outside regular work | Behavioral exposure | Examine physical activity in relation to the outcome |
+| DRNKANY6 | Any alcohol consumption in the past 30 days | Behavioral exposure | Explore the association between recent alcohol use and the outcome |
+| \_RFBING6 | Binge-drinking classification | Behavioral exposure | Examine the relationship between binge drinking and the outcome |
+| \_RFDRHV9 | Heavy-drinking classification | Behavioral exposure | Examine the relationship between heavy drinking and the outcome |
+| BPHIGH6 | Ever told by a health professional that the respondent has high blood pressure | Clinical factor | Investigate hypertension history |
+| BPMEDS1 | Currently taking prescription medicine for high blood pressure | Clinical/treatment factor | Explore treatment status among respondents asked this question |
+| TOLDHI3 | Ever told by a health professional that cholesterol is high | Clinical factor | Investigate reported high cholesterol |
+| CHOLMED3 | Currently taking prescribed medicine for cholesterol | Clinical/treatment factor | Explore cholesterol treatment status among eligible respondents |
+| DIABETE4 | Ever told the respondent they had diabetes, including pregnancy-related and prediabetes response options | Clinical factor | Investigate diabetes status |
+| \_BMI5 | Calculated body mass index (BMI) | Clinical/anthropometric factor | Examine BMI as a continuous measure |
+| \_BMI5CAT | BMI grouped into four categories | Clinical/anthropometric factor | Compare outcome across BMI categories |
+| GENHLTH | Self-rated general health | General health measure | Explore how reported overall health relates to CHD/MI history |
+
+: variables and their meanings
+
+```{r}
+Analysis_data<-Dataset%>%
+  select(`_MICHD`,SEXVAR,`_AGEG5YR`,`_RACE`,`_EDUCAG`,`_INCOMG1`,MARITAL,EMPLOY1,
+         `_SMOKER3`,`_TOTINDA`,DRNKANY6,`_RFBING6`,`_RFDRHV9`,BPHIGH6,BPMEDS1,TOLDHI3,
+         CHOLMED3,DIABETE4,`_BMI5`,`_BMI5CAT`,GENHLTH)
+```
+
+```{r}
+dim(Analysis_data)
+```
+
+```{r}
+glimpse(Analysis_data)
+```
+
+```{r}
+code_meaning<-read_csv("C:\\Users\\USER\\OneDrive\\Desktop\\E.A.A\\R\\PROJECTS\\Epidemiology in R\\meaning_in_codebook.csv")
+code_meaning
+```
+
+# Data quality check and preparation.
+
+```{r}
+missing_summary <- Analysis_data %>%
+  summarise(
+    across(
+      everything(),
+      ~ sum(is.na(.x))
+    )
+  )
+
+missing_summary
+```
+
+```{r}
+missing_summary <- Analysis_data %>%
+  summarise(
+    across(everything(), ~ sum(is.na(.x)))
+  ) %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "variable",
+    values_to = "missing_count"
+  ) %>%
+  mutate(
+    total_rows = nrow(Analysis_data),
+    missing_percent = round(
+      missing_count / total_rows * 100, 2
+    )
+  ) %>%
+  arrange(desc(missing_percent))
+
+missing_summary
+```

@@ -1,0 +1,4 @@
+model,term,OR,lo,hi,p
+BMI model (no clinical mediators),bmicatUnderweight,1.17,0.91,1.5,0.214
+BMI model (no clinical mediators),bmicatOverweight,1.17,1.08,1.27,2.32e-4
+BMI model (no clinical mediators),bmicatObese,1.5,1.38,1.64,5.420000000000001e-21
